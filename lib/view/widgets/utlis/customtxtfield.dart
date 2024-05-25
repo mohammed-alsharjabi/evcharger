@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vision1/core/theme/color.dart';
 
+import '../../../core/theme_helper.dart';
+
 
 
 class CustomInputText extends StatelessWidget {
@@ -29,18 +31,9 @@ class CustomInputText extends StatelessWidget {
     return  Container(
       margin: const EdgeInsets.symmetric(horizontal: 15,vertical: 5),
       padding: const  EdgeInsets.all(5),
-      decoration:  BoxDecoration(
-        color: AppColor.white,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow:const   [
-          BoxShadow(
-            color: Colors.grey,
-            blurRadius: 7,
-            spreadRadius: -2
-          )
-        ]
-      ),
-
+decoration: BoxDecoration(
+  borderRadius: BorderRadius.circular(34)
+),
       child:  TextFormField(
           keyboardType: inputType,
           textDirection: TextDirection.rtl,
@@ -48,20 +41,34 @@ class CustomInputText extends StatelessWidget {
           controller: mycontroller,
           obscureText: obscureText == null || obscureText == false ? false : true,
           decoration: InputDecoration(
-              hintText: hinttext,
+            hintText: hinttext,
             hintTextDirection: TextDirection.rtl,
-              hintStyle: const TextStyle(wordSpacing: 7, fontSize: 15,color: AppColor.gray,fontWeight: FontWeight.bold),
-              disabledBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-              floatingLabelBehavior: FloatingLabelBehavior.always,
-              contentPadding:
-              const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+            hintStyle: const TextStyle(wordSpacing: 7, fontSize: 15,color: AppColor.gray,fontWeight: FontWeight.bold),
+            enabledBorder:  OutlineInputBorder(
+              borderSide: BorderSide(
+                color: appTheme.gray200,
+                width: 1,
+              ),
+            ),
+            disabledBorder:  OutlineInputBorder(
+              borderSide: BorderSide(
+                color: appTheme.gray200,
+                width: 1,
+              ),
+            ),
+
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+              contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
               suffixIcon: InkWell(onTap: onTapIcon, child:  Icon(iconData)),
             border: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(10)),
+                borderSide:  BorderSide(
+                  color: appTheme.gray200,
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(20)),
 
           ),
+
         ),
       );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vision1/core/theme/color.dart';
 
 import '../../../core/text_theme_helper.dart';
 import '../../../core/theme_helper.dart';
@@ -14,7 +15,7 @@ class StationInfoWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(getHorizontalSize(12)),
-            color: appTheme.gray50),
+            color: AppColor.gray4),
         child:    Padding(
           padding: getPadding(all: 16),
           child: Column(
@@ -24,13 +25,11 @@ class StationInfoWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    stationInfo.stationName!, overflow: TextOverflow.ellipsis,
+                    stationInfo.name!, overflow: TextOverflow.ellipsis,
                       style: TextThemeHelper.titleLargeBold_1),
 
                   Text(
-                      stationInfo.stationOpen!,
-                      overflow: TextOverflow
-                          .ellipsis,
+                      stationInfo.status!,
                       style: TextThemeHelper
                           .bodymedium16green),
 
@@ -48,10 +47,8 @@ class StationInfoWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: getHorizontalSize(39),),
-                  Text(stationInfo.stationCoast!+"\$"+"بالساعة",
-                      overflow:
-                      TextOverflow.ellipsis,
-                      textAlign: TextAlign.center, style: theme.textTheme.bodyLarge
+                  Text("${stationInfo.price!}\$    بالساعة",
+                      textAlign: TextAlign.center, style: TextThemeHelper.bodymedium16black
                   ),
 
                 ],
@@ -68,10 +65,9 @@ class StationInfoWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: getHorizontalSize(39),),
-                  Text(stationInfo.stationCity!+"-"+stationInfo.stationStreet!,
-                      overflow: TextOverflow.ellipsis,
+                  Text(stationInfo.address!,
                       textAlign: TextAlign.center,
-                      style: theme.textTheme.bodyLarge),
+                      style: TextThemeHelper.bodymedium16black),
 
                 ],
               )

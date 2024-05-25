@@ -4,18 +4,20 @@ import 'package:http/http.dart' as http;
 import 'package:vision1/core/class/statusrequest.dart';
 import '../functions/checkinternet.dart';
 
+
 class Crud {
   Future<Either<StatusRequest, Map>> postData(String linkurl, Map data) async {
    
       if (await checkInternet()) {
         var response = await http.post(Uri.parse(linkurl), body: data);
-          print(response.statusCode) ; 
+          print(response.statusCode) ;
 
         if (response.statusCode == 200 || response.statusCode == 201) {
           Map responsebody = jsonDecode(response.body);
-          print(responsebody) ; 
+          print(responsebody) ;
           
           return Right(responsebody);
+
         } else {
           return const Left(StatusRequest.serverfailure);
         }
@@ -26,3 +28,6 @@ class Crud {
      
   }
 }
+
+
+

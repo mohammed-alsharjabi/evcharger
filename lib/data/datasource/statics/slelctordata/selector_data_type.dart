@@ -2,7 +2,10 @@
 
 enum SelectorDataType{
   brand  ,
-  connector  ,
   model ,
+  chargeType,
+  chargePort,
+  timeOfFullCharge,
+  countWheeler,
   none ,
 }

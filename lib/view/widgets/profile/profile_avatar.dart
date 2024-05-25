@@ -7,10 +7,11 @@ import '../../../core/theme_helper.dart';
 class ProfileAvatarItem extends StatelessWidget {
 
 
-   const ProfileAvatarItem({required this.avatarPath,required this.phoneNumber,super.key});
+   const ProfileAvatarItem({ this.avatarPath, this.name, this.phoneNumber,super.key});
 
-   final String avatarPath;
-   final String phoneNumber;
+   final String? avatarPath;
+   final String? phoneNumber;
+   final String? name;
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -20,15 +21,16 @@ class ProfileAvatarItem extends StatelessWidget {
       child: Column(
 children: [
   CustomImageView(
-    imagePath: ImageConstant.imgAvtar1,
+    imagePath: avatarPath??ImageConstant.imgAvtar1,
     height: getSize(104,),
     width: getSize(104,),
+    radius: BorderRadius.circular(50),
     margin: getMargin(top: 20,),),
  const  SizedBox(height: 5,),
   Padding(
     padding: getPadding(top: 0,),
     child: Text(
-      "محمد الشرجبي",
+      name!??"mousa",
       overflow: TextOverflow.ellipsis,
       style: theme.textTheme.headlineMedium,
     ),
@@ -38,9 +40,9 @@ children: [
   Padding(
     padding: getPadding(top: 0,),
     child: Text(
-      "00967772351246",
+      phoneNumber!,
       overflow: TextOverflow.ellipsis,
-      style: theme.textTheme.titleSmall,
+      style: theme.textTheme.bodyLarge,
     ),
   ),
 

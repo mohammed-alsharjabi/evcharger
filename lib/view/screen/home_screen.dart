@@ -41,18 +41,17 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor: AppColor.backGroundColor,
               elevation: 10,
               showSelectedLabels: true,
-
+selectedLabelStyle: TextStyle(fontSize: 12,height: 2,fontWeight: FontWeight.normal,),
               selectedItemColor: AppColor.green2,
               unselectedItemColor: AppColor.black,
               type: BottomNavigationBarType.fixed,
               currentIndex: controller.currentPage,
               items:  [
-                BottomNavigationBarItem(icon:const Icon(Icons.home), label: controller.titlebottomappbar[0]),
+                BottomNavigationBarItem(icon:const Icon(Icons.home_outlined), label: controller.titlebottomappbar[0]),
                 BottomNavigationBarItem(icon:const Icon(Icons.search), label: controller.titlebottomappbar[1]),
 
-
-                BottomNavigationBarItem(icon:const Icon(Icons.book_online), label:controller.titlebottomappbar[2]),
-                BottomNavigationBarItem(icon:const Icon(Icons.person), label:controller.titlebottomappbar[3]),
+                BottomNavigationBarItem(icon:const Icon(Icons.favorite_border), label:controller.titlebottomappbar[2]),
+                BottomNavigationBarItem(icon:const Icon(Icons.person_outline), label:controller.titlebottomappbar[3]),
               ],
             ),
           ),

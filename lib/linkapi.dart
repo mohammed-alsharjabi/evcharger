@@ -1,8 +1,11 @@
 
 class AppLink {
 
-  static const String server = "https://mohammed.com/ecommercee";
-  static const String imageststatic = "https://mohammed.com/ecommercee/upload";
+  static const String post="https://jsonplaceholder.typicode.com/posts";
+
+
+  static const String server = "https://mohammed.com/vehicle";
+  static const String imageststatic = "https://mohammed.com/vehicle/upload";
 
 //========================== Image ============================
   static const String imagestCategories = "$imageststatic/categories";
@@ -21,10 +24,8 @@ class AppLink {
 // ================================= ForgetPassword ========================== //
 
   static const String checkEmail = "$server/forgetpassword/checkemail.php";
-  static const String resetPassword =
-      "$server/forgetpassword/resetpassword.php";
-  static const String verifycodeforgetpassword =
-      "$server/forgetpassword/verifycode.php";
+  static const String resetPassword = "$server/forgetpassword/resetpassword.php";
+  static const String verifycodeforgetpassword = "$server/forgetpassword/verifycode.php";
 
 // Home
 
@@ -34,28 +35,39 @@ class AppLink {
   static const String searchitems = "$server/items/search.php";
 
 // Favorite
-
   static const String favoriteAdd = "$server/favorite/add.php";
   static const String favoriteRemove = "$server/favorite/remove.php";
   static const String favoriteView = "$server/favorite/view.php";
-  static const String deletefromfavroite =
-      "$server/favorite/deletefromfavroite.php";
+  static const String favoriteDelete = "$server/favorite/deletefromfavroite.php";
 
-  // Cart
-  static const String cartview = "$server/cart/view.php";
-  static const String cartadd = "$server/cart/add.php";
-  static const String cartdelete = "$server/cart/delete.php";
-  static const String cartgetcountitems = "$server/cart/getcountitems.php";
 
-  // Address
+  // Station
+  static const String stationView = "$server/address/view.php";
+  static const String stationAdd = "$server/address/add.php";
+  static const String stationEdit = "$server/address/edit.php";
+  static const String stationDelete = "$server/address/delete.php";
 
-  static const String addressView = "$server/address/view.php";
-  static const String addressAdd = "$server/address/add.php";
-  static const String addressEdit = "$server/address/edit.php";
-  static const String addressDelete = "$server/address/delete.php";
+  // Booking
+  static const String bookMyBookingView = "$server/address/view.php";
+  static const String bookStationBookedView = "$server/address/view.php";
+  static const String bookStationHistoryView = "$server/address/view.php";
+  static const String bookAdd = "$server/address/add.php";
+  static const String bookEdit = "$server/address/edit.php";
+  static const String bookDelete = "$server/address/delete.php";
 
-  // Coupon 
 
-  static const String checkcoupon  = "$server/coupon/checkcoupon.php";
+  // connector
+  static const String connectorView = "$server/address/view.php";
+  static const String connectorAdd = "$server/address/add.php";
+  static const String connectorEdit = "$server/address/edit.php";
+  static const String connectorDelete = "$server/address/delete.php";
+
+
+  // Vehicle
+  static const String vehicleAdd  = "$server/address/view.php";
+  static const String vehicleDelete  = "$server/address/view.php";
+  static const String vehicleView  = "$server/address/view.php";
+  static const String vehicleEdite = "$server/address/view.php";
+  static const String vehicleAll = "$server/address/view.php";
 
 }

@@ -4,7 +4,7 @@ import 'package:vision1/core/theme/color.dart';
 
 import '../../../app_rout.dart';
 import '../../../assets.dart';
-import '../../screen/review_booking_screen/review_booking_screen.dart';
+import '../../screen/review_booking_screen.dart';
 
 class StationCard extends StatelessWidget {
   const StationCard({super.key});

@@ -99,7 +99,7 @@ class Assets {
   static const String controllerLogOutController = 'lib/presentation/log_out_screen/controller/log_out_controller.dart';
   static const String controllerMyHistoryController = 'lib/presentation/my_history_screen/controller/my_history_controller.dart';
   static const String controllerMyProfileController = 'lib/presentation/my_profile_screen/controller/my_profile_controller.dart';
-  static const String controllerMyVehicleController = 'lib/presentation/my_vehicle_screen/controller/my_vehicle_controller.dart';
+  static const String controllerMyVehicleController = 'lib/presentation/my_vehicle_screen/controller/vehicle_controller.dart';
   static const String controllerOnboardingOneController = 'lib/presentation/onboarding_one_screen/controller/onboarding_one_controller.dart';
   static const String controllerPasswordResetSuccessController = 'lib/presentation/password_reset_success_screen/controller/password_reset_success_controller.dart';
   static const String controllerPaymentMethodController = 'lib/presentation/payment_method_screen/controller/payment_method_controller.dart';

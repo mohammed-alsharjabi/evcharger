@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +7,8 @@ import '../data/model/onboardingmodel/slidergetyoursm_item_model.dart';
 class OnboardingController extends GetxController {
   Rx<OnboardingModel> onboardingOneModelObj = OnboardingModel().obs;
 
-  List<SlidergetyoursmItemModel> onboardingData = OnboardingModel.slidergetyoursmItemList();
+  List<SlidergetyoursmItemModel> onboardingData =
+      OnboardingModel.slidergetyoursmItemList();
 
   PageController pageController = PageController();
 
@@ -22,4 +20,3 @@ class OnboardingController extends GetxController {
     update();
   }
 }
-

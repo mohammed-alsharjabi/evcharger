@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vision1/core/theme/color.dart';
 import 'package:vision1/view/widgets/profile/setting_model.dart';
 
 import '../../../core/app_decoration.dart';
@@ -23,11 +24,12 @@ class SettingItem extends StatelessWidget {
         settingModel.onTap.call();
       },
       child: Container(
-        margin:const EdgeInsets.only(right: 16,left:16,top: 16 ),
-        padding:const EdgeInsets.only(right: 16,left:16,top: 16,bottom: 15 ),
+        margin:const EdgeInsets.only(right: 16,left:16,top: 14 ),
+        padding:const EdgeInsets.only(right: 16,left:16,top: 9,bottom: 9 ),
 
         decoration: AppDecoration.fill3.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder16,
+          color: AppColor.gray10,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +47,7 @@ class SettingItem extends StatelessWidget {
               child: Text(
                 settingModel.name,
                 overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.titleLarge,
+                style: const TextStyle(fontWeight: FontWeight.normal,fontSize: 16,color: AppColor.black),
               ),
             ),
             const  Spacer(),
@@ -71,30 +73,5 @@ class SettingItem extends StatelessWidget {
 
 
 
-  static Widget buildLogOutWidget() {
-    return GestureDetector(
-        child: Container(
-            margin:const  EdgeInsets.symmetric(horizontal: 23),
-            padding:const  EdgeInsets.symmetric(horizontal: 14, vertical: 13),
-            decoration: AppDecoration.fillGray
-                .copyWith(borderRadius: BorderRadiusStyle.roundedBorder12),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CustomImageView(
-                      imagePath: ImageConstant.imgUser,
-                      height: 28,
-                      width: 28,
-                      color: Colors.red,
-                      margin:const
-                      EdgeInsets.only(left: 9, top: 4, bottom: 5)),
-                  Padding(
-                      padding: const EdgeInsets.only(left: 194, top: 6),
-                      child: Text("lbl6".tr,
-                          textAlign: TextAlign.center,
-                          style:theme.textTheme.headlineSmall!.copyWith(
-                              color: theme.colorScheme.primaryContainer)),
-                  )])));
-  }
+
 }

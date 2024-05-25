@@ -10,43 +10,54 @@ import '../../../core/text_theme_helper.dart';
 import '../../../core/theme_helper.dart';
 
 
-class SelectItemWidget extends StatelessWidget {
+
+class SelectItemWidget extends StatefulWidget {
   SelectItemWidget({super.key, required this.selectorDataType});
 
   final SelectorDataType selectorDataType;
-  SelectInputItemController controller =Get.put(SelectInputItemController());
 
+  @override
+  State<SelectItemWidget> createState() => _SelectItemWidgetState();
+}
+
+class _SelectItemWidgetState extends State<SelectItemWidget> {
+
+
+  SelectInputItemController controller= Get.put(SelectInputItemController());
   @override
   Widget build(BuildContext context) {
 
-    return GestureDetector(
+    return  GestureDetector(
       onTap: (){
-         Get.to(SelectItemScreen(selectorDataType: selectorDataType));
+        Get.to(SelectItemScreen(selectorDataType:widget.selectorDataType));
+        setState(() {
+
+        });
       },
       child:
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(getHorizontalSize(12)),
-                border: Border.all(color: appTheme.gray300)
-            ),
-            child: Padding(
-              padding: getPadding(left: 16,right: 16,top: 14,bottom: 14),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(controller.getCurrentSelect(selectorDataType),style:controller.currentSelect.isEmpty? TextThemeHelper.bodyLargeGray600:
-                  TextStyle(
-                      color: appTheme.black,
-                      fontWeight: FontWeight.w400,
-                      fontSize: getFontSize(16),
-                  ),),
 
-                  CustomImageView(
-                      imagePath: ImageConstant.imgArrowleft)
-                ],
-              ),
-            ),
-          )
+      Container(
+        margin: getMargin(top: 15,right: 15,left: 15),
+
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(getHorizontalSize(12)),
+            border: Border.all(color: appTheme.gray300)
+        ),
+        child: Padding(
+          padding: getPadding(left: 16,right: 16,top: 14,bottom: 14),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+            Text(controller.getCurrentSelect(widget.selectorDataType),style:controller.theme),
+
+              CustomImageView(
+                  imagePath: ImageConstant.imgArrowleft)
+            ],
+          ),
+        ),
+      ),
+
+
 
 
 

@@ -9,6 +9,8 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.2.0 <4.0.0'
 
+
+
 dependencies:
   flutter:
     sdk: flutter
@@ -26,10 +28,15 @@ dependencies:
 #  google_fonts: ^6.2.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+flutter_launcher_icons:
+    android: "launcher_icon"
+    ios: true
+    image_path: "assets/images/app_logo.png"
+    min_sdk_android: 21
+    flutter_test:
+    sdk: flutter clean
+    flutter_lints: ^2.0.0
 
 flutter:
 
@@ -37,6 +44,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/lottie/
   # example:
   fonts:
     - family: Cairo

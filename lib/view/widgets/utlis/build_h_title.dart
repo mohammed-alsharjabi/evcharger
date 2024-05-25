@@ -4,25 +4,27 @@ import '../../../core/theme/color.dart';
 
 buildTitleAll({required String title,required VoidCallback onTap}){
   return    Container(
-    margin: const EdgeInsets.symmetric(horizontal: 15,vertical: 0),
-    padding: const   EdgeInsets.all(3),
+    margin: const EdgeInsets.symmetric(horizontal: 5,vertical: 0),
+    color: Colors.transparent,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          alignment: Alignment.topRight,
 
-          margin: const EdgeInsets.only(top: 0,right: 30,bottom: 0),
+          margin: const EdgeInsets.only(top: 15,right: 11,bottom: 0),
           child: Text(title,
               style:const  TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                   color: AppColor.primary,
-                  fontWeight: FontWeight.bold)),
+                  fontWeight: FontWeight.normal)),
         ),
 
         InkWell(
             onTap: onTap,
-            child: const   Text("عرض الكل",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: AppColor.greenButtonColor),
+            child:const  Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 6),
+              child:    Text("عرض الكل",style: TextStyle(fontSize: 14,fontWeight: FontWeight.normal,color: AppColor.gray),
+              ),
             )
 
         ),

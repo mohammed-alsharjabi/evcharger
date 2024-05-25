@@ -9,10 +9,12 @@ class AppColor {
   //green
   static const Color green1 = Color(0xFF35A339);
   static const Color green2 = Color(0xFF04B155);
+  static const Color green3 = Color(0xFF4DB77F);
   static const Color greenTextColor = Color(0xFF04B155);
   static const Color greenButtonColor = Color(0xFF36A439);
-  static const Color green50 = Color(0xFFEBF6EB);
+  static const Color green50 = Color(0xFFC7EAC7);
   static const Color lightGreen50 = Color(0xFFEEFBEE);
+  static const Color transparent = Colors.transparent;
 
 
 
@@ -25,7 +27,8 @@ class AppColor {
   static const Color gray6 = Color(0xFFDDDDDD);
   static const Color gray7 = Color(0xFF808080);
   static const Color gray8 = Color(0xFFEBEBEB);
-  static const Color gray9 = Color(0xFF696969);
+  static const Color gray9 = Color(0xFFD8DCD7);
+  static const Color gray10 = Color(0xFFF5F5F5);
   static const Color  primary= Color(0xFF292D32);
   static const Color  shadow= Color(0xFF292D32);
 
@@ -34,6 +37,7 @@ class AppColor {
   static const Color white = Color(0xFFFFFFFF);
   static const Color backGroundColor = Color(0xFFFFFFFF);
   static const Color borderColor = Color(0xFFD9D9D9);
+  static const Color borderColor2 = Color(0xFFF8F5F5);
 
   static const Color black = Color(0xFF000000);
   static const Color black2 = Colors.black87;

@@ -178,6 +178,10 @@ class ImageConstant {
   static String imgRectangle44072 = 'assets/images/img_rectangle4407_2.png';
 
   static String imgAirplane = 'assets/images/img_airplane.svg';
+  static String splash1 = 'assets/images/splash1.jpg';
+  static String splash2 = 'assets/images/splash2.jpg';
+  static String fire = 'assets/images/fire1.svg';
+  static String mousaAvatarBg = 'assets/images/mousa_bg.jpg';
 
   static String imgIconGreen60024x24 =
       'assets/images/img_icon_green_600_24x24.svg';

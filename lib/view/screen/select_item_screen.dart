@@ -1,6 +1,8 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vision1/app_rout.dart';
+import 'package:vision1/core/theme/color.dart';
 
 import '../../controller/utils_controller/select_input_item_controller.dart';
 import '../../core/assets/image_constant.dart';
@@ -20,13 +22,14 @@ class SelectItemScreen extends StatefulWidget {
   State<SelectItemScreen> createState() => _SelectBrandScreenState();
 }
 
+
 class _SelectBrandScreenState extends State<SelectItemScreen> {
   SelectInputItemController controller = Get.put(SelectInputItemController());
 
   @override
   Widget build(BuildContext context) {
     return ColorfulSafeArea(
-            color: appTheme.white,
+            color: AppColor.backGroundColor,
             child: Scaffold(
               resizeToAvoidBottomInset: false,
               backgroundColor: theme.colorScheme.primary,
@@ -40,7 +43,7 @@ class _SelectBrandScreenState extends State<SelectItemScreen> {
                       imagePath: ImageConstant.imgArrowleft,
                       margin: getMargin(left: 18, top: 29, bottom: 26),
                       onTap: () {
-                        onTapArrowleft5();
+                        Get.back();
                       }),
                   centerTitle: true,
                   title: Text(controller.getCurrentSelect(widget.selectorDataType),
@@ -61,7 +64,8 @@ class _SelectBrandScreenState extends State<SelectItemScreen> {
                         children: [
                           SizedBox(height: getVerticalSize(8),),
                           Expanded(
-                              child: ListView.builder(
+                              child:
+                              ListView.builder(
                                 primary: false,
                                 shrinkWrap: true,
                                 itemCount: controller.listSelector(widget.selectorDataType).length,
@@ -70,8 +74,12 @@ class _SelectBrandScreenState extends State<SelectItemScreen> {
                                   SelectModel data = controller.listSelector(widget.selectorDataType)[index];
                                   return GestureDetector(
                                     onTap: (){
-                                      controller.setBrand(data.itemName);
-                                      Get.back();
+                                      controller.setData(widget.selectorDataType,data.itemName!);
+                                      // Get.offNamed(AppRoutes.addVehicleDetailsScreen);
+                                    
+                                      Get.offNamed(AppRoutes.addVehicleDetailsScreen);
+                                      // Get.offAllNamed(AppRoutes.addVehicleDetailsScreen);
+
                                     },
                                     child: Padding(
                                       padding: getPadding(top: 8, bottom: 8),
@@ -101,12 +109,11 @@ class _SelectBrandScreenState extends State<SelectItemScreen> {
                                     ),
                                   );
                                 },
-                              ))
+                              )
+                          )
                         ])),
               ),
             );
   }
-  onTapArrowleft5() {
-    Get.back();
-  }
+
 }

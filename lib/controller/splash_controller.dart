@@ -11,7 +11,7 @@ class SplashController extends GetxController {
 
   @override
   void onReady() {
-    Future.delayed(const Duration(milliseconds: 1000), () {
+    Future.delayed(const Duration(milliseconds: 200), () {
       _getIsFirst();
     });
   }
@@ -19,7 +19,7 @@ class SplashController extends GetxController {
   _getIsFirst() async {
     bool isSignIn = await MyServices.getIsSignIn();
     bool isIntro = await MyServices.getIsIntro();
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 2), () {
       print("is intro ====== $isIntro");
       print("isSignIn ====== $isSignIn");
       if (isIntro) {

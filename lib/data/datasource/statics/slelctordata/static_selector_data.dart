@@ -20,7 +20,7 @@ class StaticSelectorData{
     ];
   }
 
-  static List<SelectModel> getConnectorNameData(){
+  static List<SelectModel> getChargePort(){
     return [
       SelectModel(itemName: "CSS"),
       SelectModel(itemName: "RX32"),
@@ -30,6 +30,7 @@ class StaticSelectorData{
       SelectModel(itemName: "TYPE1"),
       SelectModel(itemName: "TYPE2"),
       SelectModel(itemName: "LEVEL2"),
+
     ];
   }
 
@@ -44,6 +45,26 @@ class StaticSelectorData{
       SelectModel(itemName: "2024"),
     ];
   }
+
+  static List<SelectModel> getChargeType(){
+    return [
+      SelectModel(itemName: "AC"),
+      SelectModel(itemName: "DC"),
+    ];
+  }
+
+  static List<SelectModel> getVehicleWheeler(){
+    return [
+      SelectModel(itemName: "Wheeler 1"),
+      SelectModel(itemName: "Wheeler 2"),
+      SelectModel(itemName: "Wheeler 3"),
+      SelectModel(itemName: "Wheeler 4"),
+      SelectModel(itemName: "Wheeler 5"),
+    ];
+  }
+
+
+
 
 
 

@@ -11,7 +11,7 @@ class SettingData {
     "المفضلة",
     "الحجوزات",
     "سياسة الخصوصية",
-    "تسجيل الخروج",
+
   ];
   static List image = [
     ImageConstant.imgIcuser,
@@ -19,15 +19,14 @@ class SettingData {
     ImageConstant.imgFavorite,
     ImageConstant.imgCalendarOnerror,
     ImageConstant.imgCarOnerror22x22,
-    ImageConstant.imgRefreshOnerror,
+
 
   ];
   static List action = [
-    AppRoutes.homePage,
+    AppRoutes.profileDataScreen,
     AppRoutes.vehicleDetailsScreen,
     AppRoutes.favoriteListPage,
     AppRoutes.bookingScreen,
-    AppRoutes.profileScreen,
-    AppRoutes.homePage,
+    AppRoutes.termsConditionScreen,
   ];
 }

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vision1/controller/station/station_details_controller.dart';
+import 'package:vision1/controller/station/station_controller.dart';
 
 import '../../../core/assets/image_constant.dart';
 import '../../../core/custom_image_view.dart';
 import '../../../core/theme_helper.dart';
 
 
-class StationImages extends GetView<StationDetailsController> {
-  const StationImages({super.key});
+class StationImages extends GetView<StationControllerImp> {
+   StationImages({super.key,required  this.img});
 
-
+String  img;
   @override
   Widget build(BuildContext context) {
     return     Container(
@@ -33,7 +33,7 @@ class StationImages extends GetView<StationDetailsController> {
               itemBuilder: (context, index) {
                 return CustomImageView(
                   imagePath:
-                  ImageConstant.imgRectangle4393263x428,
+                  img,
                 );
               },
             ),

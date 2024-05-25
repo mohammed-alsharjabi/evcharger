@@ -1,6 +1,7 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vision1/core/theme/color.dart';
 
 import '../../controller/splash_controller.dart';
 import '../../core/assets/image_constant.dart';
@@ -31,9 +32,10 @@ class _SplashOneScreenState extends State<SplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomImageView(
-                          imagePath: ImageConstant.imgAirplane,
-                          height: getSize(94),
-                          width: getSize(94)),
+                          imagePath: ImageConstant.fire,
+                          color: AppColor.backGroundColor,
+                          height: getSize(150),
+                          width: getSize(150)),
                       Padding(
                           padding: getPadding(top: 25, bottom: 5),
                           child: Text("app_name".tr,

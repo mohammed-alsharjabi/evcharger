@@ -1,35 +1,43 @@
 
 
 class StationInfoModel {
-  String? stationId;
-  String? stationName;
-  String? stationCity;
-  String? stationStreet;
-  String? stationCoast;
-  String? stationOpen;
+  String? id;
+  String? name;
+  String? address;
+  String? icon;
+  String? locationLat;
+  String? locationLong;
+  String? price;
+  String? status;
+  String? rate;
 
 
-  StationInfoModel({this.stationId, this.stationName, this.stationCity,
-      this.stationStreet, this.stationCoast, this.stationOpen}); //
+  StationInfoModel(this.id, this.name, this.address, this.icon,this.locationLat,
+      this.locationLong, this.price, this.status, this.rate);
 
 
   StationInfoModel.fromJson(Map<String, dynamic> json) {
-    stationId = json['station_id'];
-    stationName = json['station_name'];
-    stationCity = json['station_city'];
-    stationStreet = json['station_street'];
-    stationCoast = json['station_coast'];
-    stationOpen = json['station_open'];
+    id = json['station_id'];
+    name = json['station_name'];
+    address = json['station_address'];
+    locationLat = json['location_lat'];
+    locationLong = json['location_long'];
+    status = json['station_status'];
+    rate = json['station_rate'];
+    price = json['station_price'];
+
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['station_id'] = stationId;
-    data['station_name'] = stationName;
-    data['station_city'] = stationCity;
-    data['station_street'] = stationStreet;
-    data['station_coast'] = stationCoast;
-    data['station_open'] = stationOpen;
+    data['station_id'] = id;
+    data['station_name'] = name;
+    data['station_address'] = address;
+    data['location_lat'] = locationLat;
+    data['location_long'] = locationLong;
+    data['station_status'] = status;
+    data['station_rate'] = rate;
+    data['station_price'] = price;
     return data;
   }
 }

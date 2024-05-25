@@ -70,6 +70,8 @@ class TextThemeHelper {
 
   static get titleLargeBold_1 => theme.textTheme.titleLarge!.copyWith(
     fontWeight: FontWeight.w700,
+    fontSize: 13,
+    fontFamily: "Cairo"
   );
 
   static get titleMediumOpenSans_1 => theme.textTheme.titleMedium!.openSans;
@@ -106,12 +108,10 @@ class TextThemeHelper {
     fontWeight: FontWeight.w700,
   );
   static get bodymedium16green => theme.textTheme.titleLarge!.copyWith(
-    fontSize: getFontSize(
-      16,
-    ),
-    fontFamily: "SF Pro Text",
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    fontFamily: "Cairo",
     color: appTheme.buttonColor,
-    fontWeight: FontWeight.w600,
   );
 
   static get bodymedium16black400 => theme.textTheme.titleLarge!.sFProDisplay.copyWith(
@@ -175,12 +175,10 @@ class TextThemeHelper {
     fontWeight: FontWeight.w400,
   );
   static get bodymedium16black => theme.textTheme.titleLarge!.copyWith(
-    fontSize: getFontSize(
-      16,
-    ),
-    fontFamily: "SF Pro Text",
+    fontSize: 13,
+    fontFamily: "Cairo",
     color: appTheme.black,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w500,
   );
 
   static get titleMediumOpenSans =>

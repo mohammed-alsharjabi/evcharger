@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vision1/data/model/user_model.dart';
 
 class MyServices extends GetxService {
 
@@ -43,6 +44,12 @@ class MyServices extends GetxService {
     return prefs.getBool(signIn) ?? true;
   }
 
+
+  static logOut() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool(signIn, true);
+  }
+
   static setIsLocation(bool isFav) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setBool(locationScreenVisible, isFav);
@@ -54,10 +61,15 @@ class MyServices extends GetxService {
   }
 
 
+void setUserData(UserModel userModel){
+  sharedPreferences.setString("key", userModel.email!);
+  sharedPreferences.setString("key", userModel.password!);
 
+}
 
 }
 
 initialServices() async {
+
   await Get.putAsync(() => MyServices().init());
 }
